@@ -7,25 +7,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tb_usuario")
+@Table(name = "tb_pacote")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
+public class Pacote {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_usuario")
+    @Column(name = "id_pacote")
     private Long id;
-
-    @Column(name = "nome_usuario")
-    private String usuario;
-
-    @Column(name = "senha_usuario")
-    private String senha;
-
-    @ManyToOne
-    @JoinColumn(name = "album_id")
-    private Album albumId;
-
 }

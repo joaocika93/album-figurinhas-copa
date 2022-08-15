@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "tb_titulo")
+@Table(name = "tb_titulos")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,9 +21,4 @@ public class Titulo {
     @Column(name = "nome_titulo")
     private String nome;
 
-    @ManyToMany(mappedBy = "titulos")
-    private List<Jogador> jogadores;
-
-    @ManyToMany(mappedBy = "titulos")
-    private List<Selecao> selecoes;
 }

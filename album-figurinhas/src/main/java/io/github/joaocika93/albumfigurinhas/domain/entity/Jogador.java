@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "tb_jogador")
+@Table(name = "tb_jogadores")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,14 +25,14 @@ public class Jogador {
     @Column(name = "idade_jogador")
     private Integer idade;
 
-    @ManyToMany
-    @JoinTable(name = "titulos_jogador",
-            joinColumns = {@JoinColumn(name = "id_jogador")},
-            inverseJoinColumns = {@JoinColumn(name = "id_titulo")})
-    private List<Titulo> titulos;
-
     @ManyToOne
-    @JoinColumn(name = "selecao_jogador")
+    @JoinColumn(name = "selecao_id")
     private Selecao selecao;
+
+    @ManyToMany
+    @JoinTable(name = "tb_pacote_jogadores",
+            joinColumns = {@JoinColumn(name = "jogador_id")},
+            inverseJoinColumns = {@JoinColumn(name = "id_jogador")})
+    private List<Pacote> pacotes;
 
 }

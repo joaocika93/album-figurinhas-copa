@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "tb_selecao")
+@Table(name = "tb_selecoes")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,15 +25,15 @@ public class Selecao {
     @Column(name = "descricao_selecao")
     private String descricao;
 
-    @ManyToMany
-    @JoinTable(name = "titulos_selecao",
-            joinColumns = {@JoinColumn(name = "id_selecao")},
-            inverseJoinColumns = {@JoinColumn(name = "id_titulo")}
-    )
-    private List<Titulo> titulos;
+    @Column(name = "emblema_selecao")
+    private String emblema;
 
     @ManyToOne
-    @JoinColumn(name = "album_selecao")
+    @JoinColumn(name = "album_id")
     private Album album;
+
+    @ManyToOne
+    @JoinColumn(name = "tecnico_id")
+    private Tecnico tecnico;
 
 }

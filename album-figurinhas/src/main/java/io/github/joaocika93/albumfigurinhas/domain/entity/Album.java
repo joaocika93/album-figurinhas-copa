@@ -16,7 +16,7 @@ public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_album")
-    private Long id;
+    private Integer id;
 
     @Column(name = "nome_album")
     private String nome;

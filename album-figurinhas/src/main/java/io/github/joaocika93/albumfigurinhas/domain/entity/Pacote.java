@@ -16,5 +16,5 @@ public class Pacote {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_pacote")
-    private Long id;
+    private Integer id;
 }

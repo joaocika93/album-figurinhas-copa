@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "tb_selecoes")
@@ -17,7 +16,7 @@ public class Selecao {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_selecao")
-    private Long id;
+    private Integer id;
 
     @Column(name = "nome_selecao")
     private String nome;

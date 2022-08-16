@@ -1,4 +1,4 @@
-package io.github.joaocika93.albumfigurinhas.domain.repository;
+package io.github.joaocika93.albumfigurinhas.domain.repositories;
 
 import io.github.joaocika93.albumfigurinhas.domain.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -19,7 +19,7 @@ public class PacoteJogadores {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_pacote_jogadores")
-    private Long id;
+    private Integer id;
 
     @ManyToMany(mappedBy = "pacotes")
     private List<Jogador> jogadores;

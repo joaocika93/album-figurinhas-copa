@@ -16,7 +16,7 @@ public class Tecnico {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_tecnico")
-    private Long id;
+    private Integer id;
 
     @Column(name = "nome_tecnico")
     private String nome;

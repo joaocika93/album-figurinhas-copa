@@ -16,7 +16,7 @@ public class Titulo {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id_titulo")
-    private Long id;
+    private Integer id;
 
     @Column(name = "nome_titulo")
     private String nome;

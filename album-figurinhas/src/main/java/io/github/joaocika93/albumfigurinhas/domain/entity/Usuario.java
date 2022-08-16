@@ -16,16 +16,16 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_usuario")
-    private Long id;
+    private Integer id;
 
     @Column(name = "nome_usuario")
-    private String usuario;
+    private String nome;
 
     @Column(name = "senha_usuario")
     private String senha;
 
     @ManyToOne
     @JoinColumn(name = "album_id")
-    private Album albumId;
+    private Album album;
 
 }

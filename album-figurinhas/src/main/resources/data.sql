@@ -69,3 +69,33 @@ CREATE TABLE TB_PACOTE_JOGADORES(
 
 insert into tb_album (nome_album, descricao_album)
 values ('Album copa 2022', 'Album de figurinhas');
+
+insert into tb_tecnicos (nome_tecnico, idade_tecnico)
+values ('Adenor Leonardo Bachi', 61);
+
+insert into tb_tecnicos (nome_tecnico, idade_tecnico)
+values ('Lionel Sebastián Scaloni', 44);
+
+insert into tb_selecoes (nome_selecao, descricao_selecao, emblema_selecao, album_id, tecnico_id)
+values ('Brasil', 'Selecão Brasileira de Futebol', 'Canarinho', 1 , 1);
+
+insert into tb_selecoes (nome_selecao, descricao_selecao, emblema_selecao, album_id, tecnico_id)
+values ('Argentina', 'Selecão Argentina de Futebol', 'La Albiceleste', 1 , 2);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Neymar da Silva Santos Júnior', 30, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Alisson Ramses Becker ', 29, 1);
+
+insert into tb_titulos (nome_titulo)
+values ('Copa das Confederações');
+
+insert into tb_titulos (nome_titulo)
+values ('Olimpiadas');
+
+insert into tb_titulos_jogador (jogador_id, titulo_id)
+values (1,1);
+
+insert into tb_titulos_jogador (jogador_id, titulo_id)
+values (1,2)

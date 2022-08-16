@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/usuario")
 public class UsuarioController {
 
-    @Autowired
-    UsuarioService usuarioService;
+    private final UsuarioService usuarioService;
+
+    public UsuarioController(UsuarioService usuarioService) {
+        this.usuarioService = usuarioService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

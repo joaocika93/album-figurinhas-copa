@@ -29,10 +29,15 @@ public class Jogador {
     @JoinColumn(name = "selecao_id")
     private Selecao selecao;
 
+    @OneToMany
+    @JoinColumn(name = "titulo_id")
+    private List<Titulo> titulos;
+
     @ManyToMany
     @JoinTable(name = "tb_pacote_jogadores",
             joinColumns = {@JoinColumn(name = "jogador_id")},
             inverseJoinColumns = {@JoinColumn(name = "id_jogador")})
     private List<Pacote> pacotes;
+
 
 }

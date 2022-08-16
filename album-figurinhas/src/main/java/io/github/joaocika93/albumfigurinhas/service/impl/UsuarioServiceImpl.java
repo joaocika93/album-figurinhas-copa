@@ -17,11 +17,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
+    private final UsuarioRepository usuarioRepository;
 
-    @Autowired
-    private AlbumRepository albumRepository;
+    private final AlbumRepository albumRepository;
+
+    public UsuarioServiceImpl(UsuarioRepository usuarioRepository, AlbumRepository albumRepository) {
+        this.usuarioRepository = usuarioRepository;
+        this.albumRepository = albumRepository;
+    }
 
     @Override
     @Transactional

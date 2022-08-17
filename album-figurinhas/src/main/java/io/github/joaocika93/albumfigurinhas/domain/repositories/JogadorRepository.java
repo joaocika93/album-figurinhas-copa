@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 public interface JogadorRepository extends JpaRepository<Jogador, Integer> {
     @Query(" select j from Jogador j where j.selecao = :selecao")
-    List<Jogador> getAllJogadoresBySelecao(@Param("selecao") Selecao selecao);
+    List<Jogador> findAllJogadoresBySelecao(@Param("selecao") Selecao selecao);
 }

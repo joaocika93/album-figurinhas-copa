@@ -33,7 +33,7 @@ public class JogadoresServiceImpl implements JogadorService {
                 .findById(id)
                 .orElseThrow(SelecaoNaoEncontradaException::new);
 
-        var jogadores = jogadorRepository.getAllJogadoresBySelecao(selecao);
+        var jogadores = jogadorRepository.findAllJogadoresBySelecao(selecao);
         jogadores.stream().map(jogador -> {
             jogador.setTitulos(titulosJogadorRepository.findTitulosByJogador(jogador));
             return jogador;
@@ -43,7 +43,7 @@ public class JogadoresServiceImpl implements JogadorService {
 
     @Override
     public List<Jogador> getJogadoresBySelecao(Selecao selecao) {
-        List<Jogador> jogadores = jogadorRepository.getAllJogadoresBySelecao(selecao);
+        List<Jogador> jogadores = jogadorRepository.findAllJogadoresBySelecao(selecao);
         jogadores.stream().map(jogador -> {
             jogador.setTitulos(titulosJogadorRepository.findTitulosByJogador(jogador));
             return jogador;

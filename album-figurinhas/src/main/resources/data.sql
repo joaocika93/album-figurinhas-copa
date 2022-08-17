@@ -86,7 +86,25 @@ insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
 values ('Neymar da Silva Santos Júnior', 30, 1);
 
 insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
-values ('Alisson Ramses Becker ', 29, 1);
+values ('Alisson Ramses Becker', 29, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Vinícius José Paixão de Oliveira Júnior', 22, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Antony Matheus dos Santos', 22, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Carlos Henrique Casimiro', 30, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Thiago Emiliano da Silva ', 37, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Marcos Aoás Corrêa', 28, 1);
+
+insert into tb_jogadores (nome_jogador, idade_jogador, selecao_id)
+values ('Daniel Alves da Silva', 39, 1);
 
 insert into tb_titulos (nome_titulo)
 values ('Copa das Confederações');

@@ -7,22 +7,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_pacote_jogadores")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PacoteJogadores {
+public class PacoteJogador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_pacote_jogadores")
     private Integer id;
 
-    @ManyToMany(mappedBy = "pacotes")
-    private List<Jogador> jogadores;
+    @ManyToOne
+    @JoinColumn(name = "jogador_id")
+    private Jogador jogador;
 
     @ManyToOne
     @JoinColumn(name = "pacote_id")

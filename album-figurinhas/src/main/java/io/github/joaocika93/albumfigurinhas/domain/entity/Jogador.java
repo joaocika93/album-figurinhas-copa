@@ -1,5 +1,6 @@
 package io.github.joaocika93.albumfigurinhas.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +26,7 @@ public class Jogador {
     @Column(name = "idade_jogador")
     private Integer idade;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "selecao_id")
     private Selecao selecao;

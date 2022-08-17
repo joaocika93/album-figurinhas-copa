@@ -21,7 +21,7 @@ public class JogadorController {
 
     @GetMapping("/selecao/{id}")
     public List<Jogador> getAllJogadoresBySelecao(@PathVariable Integer id) {
-        return jogadorService.getJogadoresBySelecao(id);
+        return jogadorService.getJogadoresBySelecaoId(id);
     }
 
 }

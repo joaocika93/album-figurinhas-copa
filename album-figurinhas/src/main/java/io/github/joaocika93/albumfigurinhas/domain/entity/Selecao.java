@@ -36,4 +36,12 @@ public class Selecao {
     @JoinColumn(name = "tecnico_id")
     private Tecnico tecnico;
 
+    @OneToMany
+    @JoinColumn(name = "titulo_id")
+    private List<Titulo> titulos;
+
+    @OneToMany
+    @JoinColumn(name = "jogador_id")
+    private List<Jogador> jogadores;
+
 }

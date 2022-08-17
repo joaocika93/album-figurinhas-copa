@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_tecnicos")
@@ -23,4 +24,8 @@ public class Tecnico {
 
     @Column(name = "idade_tecnico")
     private Integer idade;
+
+    @OneToMany
+    @JoinColumn(name = "titulo_id")
+    private List<Titulo> titulos;
 }

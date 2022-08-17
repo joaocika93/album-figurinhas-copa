@@ -94,8 +94,17 @@ values ('Copa das Confederações');
 insert into tb_titulos (nome_titulo)
 values ('Olimpiadas');
 
+insert into tb_titulos (nome_titulo)
+values ('Copa do Mundo');
+
 insert into tb_titulos_jogador (jogador_id, titulo_id)
 values (1,1);
 
 insert into tb_titulos_jogador (jogador_id, titulo_id)
-values (1,2)
+values (1,2);
+
+insert into tb_titulos_selecao (selecao_id, titulo_id)
+values (1, 3);
+
+insert into tb_titulos_tecnico (tecnico_id, titulo_id)
+values (1, 1);

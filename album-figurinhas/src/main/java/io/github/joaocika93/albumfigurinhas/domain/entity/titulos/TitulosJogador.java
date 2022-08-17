@@ -18,7 +18,7 @@ public class TitulosJogador {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_titulo_jogador")
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "jogador_id")
